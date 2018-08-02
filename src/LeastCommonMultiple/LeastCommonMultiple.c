@@ -1,8 +1,6 @@
-#include <bits/stdc++.h>
-#include <stdlib.h>
+#include "LeastCommonMultiple.h"
 
-using namespace std;
-
+// Greatest common divider
 int euclidean_gcd(int a, int b) {
 	if (a == 0) {
 		return b;
@@ -21,6 +19,7 @@ int euclidean_gcd(int a, int b) {
 	
 	return a;
 }
+// Least common multiple
 int lcm(int a, int b) {
 	return abs(a * b) / euclidean_gcd(a, b);
 }

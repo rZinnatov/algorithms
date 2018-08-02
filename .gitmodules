@@ -1,0 +1,3 @@
+[submodule "3-party/ctest"]
+	path = 3-party/ctest
+	url = https://github.com/bvdberg/ctest.git
