@@ -1,13 +1,21 @@
 #include <stdio.h>
+#include "LeastCommonMultiple/TestLeastCommonMultiple.h"
 
-#define CTEST_MAIN
+#define TITLE(str) printf("\x1b[1m" str "\x1b[0m\n")
+#define PASSED "\x1b[32mPassed\x1b[0m"
+#define FAILED "\x1b[31mFailed\x1b[0m"
+#define TEST(name, method) printf( \
+        "\t\t%s: %s\n", \
+        name, \
+        method() ? PASSED : FAILED \
+    );
 
-#include <ctest/ctest.h>
-
-int main(int argc, const char *argv[])
+void main()
 {
-    int result = ctest_main(argc, argv);
+    TITLE("Test algorithms implementations:");
+    
+    TITLE("\tLeastCommonMultiple:");
+    TEST("MainSuccess", test_leastCommonMultiple_mainSuccess);
 
-    printf("\nDone\n");
-    return result;
+    TITLE("Done");
 }
