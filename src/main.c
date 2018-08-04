@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "BubbleSort/BubbleSort.h"
 #include "LeastCommonMultiple/TestLeastCommonMultiple.h"
 
 #define TITLE(str) printf("\x1b[1m" str "\x1b[0m\n")
@@ -14,8 +15,13 @@ void main()
 {
     TITLE("Test algorithms implementations:");
     
+
     TITLE("\tLeastCommonMultiple:");
     TEST("MainSuccess", test_leastCommonMultiple_mainSuccess);
+
+    TITLE("\tBubbleSort:");
+    TEST("MainSuccess", test_bubbleSort_mainSuccess);
+
 
     TITLE("Done");
 }
