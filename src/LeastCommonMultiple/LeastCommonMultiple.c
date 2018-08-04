@@ -15,7 +15,7 @@ int euclidean_gcd(int a, int b) {
 		mod = a % b;
 		a = b;
 		b = mod;
-	} while (mod > 0);
+	} while (mod != 0);
 	
 	return a;
 }
