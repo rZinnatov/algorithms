@@ -1,3 +1,3 @@
 #include <stdlib.h>
 
-void bubble_sort(int *input, int size);
+void bubble_sort(int *input, const unsigned int size);
