@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include "BubbleSort/BubbleSort.h"
-#include "LeastCommonMultiple/TestLeastCommonMultiple.h"
 
 #define TITLE(str) printf("\x1b[1m" str "\x1b[0m\n")
 #define PASSED "\x1b[32mPassed\x1b[0m"
@@ -21,6 +19,9 @@ void main()
 
     TITLE("\tBubbleSort:");
     TEST("MainSuccess", test_bubbleSort_mainSuccess);
+
+    TITLE("\tInsertionSort:");
+    TEST("MainSuccess", test_insertionSort_mainSuccess);
 
 
     TITLE("Done");
