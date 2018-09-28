@@ -23,6 +23,9 @@ void main()
     TITLE("\tInsertionSort:");
     TEST("MainSuccess", test_insertionSort_mainSuccess);
 
+    TITLE("\tMergeSort:");
+    TEST("MainSuccess", test_mergeSort_mainSuccess);
+
 
     TITLE("Done");
 }
