@@ -2,8 +2,6 @@
 PROJECT_ROOT_DIR = $(shell pwd)
 # Source dirs
 SRC_DIR = "$(PROJECT_ROOT_DIR)/src"
-3PARTY_DIR = "$(PROJECT_ROOT_DIR)/3-party"
-TEST_SRC_DIR = "$(PROJECT_ROOT_DIR)/test"
 # Bin dirs
 OUTPUT_SUB_DIR = "$(PROJECT_ROOT_DIR)/bin"
 OUTPUT_DIR = "$(OUTPUT_SUB_DIR)/$(TARGET_ARCH)"
@@ -13,8 +11,7 @@ BUILD_DIR = "$(BUILD_SUB_DIR)/$(TARGET_ARCH)"
 
 # Build cmake command
 CMAKE = cmake $(SRC_DIR) \
-	-DOUTPUT_DIR=$(OUTPUT_DIR) \
-	-D3PARTY_DIR=$(3PARTY_DIR)
+	-DOUTPUT_DIR=$(OUTPUT_DIR)
 
 # Define targets
 .PHONY: build

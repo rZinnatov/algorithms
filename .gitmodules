@@ -1,0 +1,3 @@
+[submodule "src/3party/zz-test"]
+	path = src/3party/zz-test
+	url = https://github.com/rZinnatov/zz-test.git
