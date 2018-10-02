@@ -2,6 +2,15 @@
 
 #include "MergeSort.h"
 
+void copy(
+	int *destination,
+	int *source,
+	unsigned int length
+) {
+	for (unsigned int i = 0; i < length; i++) {
+		destination[i] = source[i];
+	}
+}
 int* merge(
 	int *left,
 	const unsigned int left_length,
@@ -14,7 +23,24 @@ int* merge(
 	int left_index = 0;
 	int right_index = 0;
 	int merged_index = 0;
-	while (left_index < left_length || right_index < right_length) {
+	while (left_index <= left_length || right_index <= right_length) {
+		if (left_index == left_length) {
+			copy(
+				&merged[merged_index],
+				&right[right_index],
+				right_length - right_index + 1
+			);
+			break;
+		}
+		if (right_index == right_length) {
+			copy(
+				&merged[merged_index],
+				&left[left_index],
+				left_length - left_index + 1
+			);
+			break;
+		}
+
 		if (left[left_index] < right[right_index]) {
 			merged[merged_index] = left[left_index];
 			left_index++;
