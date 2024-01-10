@@ -1,5 +1,3 @@
-#include "LeastCommonMultiple.h"
-
 // Greatest common divider
 int euclidean_gcd(int a, int b) {
 	if (a == 0) {
