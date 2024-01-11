@@ -1,5 +1,5 @@
 // Greatest common divider
-int euclidean_gcd(int a, int b) {
+int euclidean_gcd(const int a, const int b) {
 	if (a == 0) {
 		return b;
 	}
@@ -18,7 +18,7 @@ int euclidean_gcd(int a, int b) {
 	return a;
 }
 // Least common multiple
-int lcm(int a, int b) {
+int lcm(const int a, const int b) {
 	return abs(a * b) / euclidean_gcd(a, b);
 }
 

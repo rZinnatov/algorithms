@@ -1,4 +1,4 @@
-int power(int base, int exponent) {
+int power(const int base, const unsigned int exponent) {
 	if (exponent == 0) {
 		return 1;
 	}
